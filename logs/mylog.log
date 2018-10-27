@@ -1,0 +1,9 @@
+2018-10-27 23:17:22 ERROR Hobby:69 - Wrong input format of hours 0 java.util.InputMismatchException
+2018-10-27 23:17:27 ERROR Hobby:166 - Wrong input format of lazyMonths 0 java.util.InputMismatchException
+2018-10-27 23:17:28 ERROR Hobby:184 - Wrong input format of friends false java.util.InputMismatchException
+2018-10-27 23:17:30 ERROR Hobby:184 - Wrong input format of friends false java.util.InputMismatchException
+2018-10-27 23:17:30 ERROR Hobby:85 - Wrong input format of day 0 java.util.InputMismatchException
+2018-10-27 23:17:32 ERROR Hobby:69 - Wrong input format of hours 0 java.util.InputMismatchException
+2018-10-27 23:17:33 ERROR Hobby:102 - Wrong input format of interval 0 java.util.InputMismatchException
+2018-10-27 23:17:34 ERROR Hobby:166 - Wrong input format of lazyMonths 0 java.util.InputMismatchException
+2018-10-27 23:17:35 ERROR Hobby:150 - Wrong input format of moneyEarn 0.0 java.util.InputMismatchException
