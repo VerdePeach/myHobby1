@@ -4,19 +4,19 @@ import org.apache.log4j.Logger;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-public class Hobby {
+public abstract class Hobby {
 
     final static Logger logger = Logger.getLogger(Hobby.class);
 
-    private String name;
-    private int hours; // hours for hobby a week;
-    private short day; //amount of days when you are engaged in hobby a week
-    private byte interval; // maximum number of days in a row when you don't do hobbies
-    private char priority; //priority of hobby from A to F
-    private float moneySpend; // spend for hobby
-    private double moneyEarn; // profit from a hobby
-    private long lazyMonths; // amount of month a year when you do not do hobby a
-    private boolean friends;// My friends have the same hobby
+    protected String name;
+    protected int hours; // hours for hobby a week;
+    protected short day; //amount of days when you are engaged in hobby a week
+    protected byte interval; // maximum number of days in a row when you don't do hobbies
+    protected char priority; //priority of hobby from A to F
+    protected float moneySpend; // spend for hobby
+    protected double moneyEarn; // profit from a hobby
+    protected long lazyMonths; // amount of month a year when you do not do hobby a
+    protected boolean friends;// My friends have the same hobby
     Scanner scanner = new Scanner(System.in);
 
     Hobby() {
@@ -32,13 +32,6 @@ public class Hobby {
         setFriends();
     }
 
-    Hobby(String name){
-        this.name = name;
-    }
-    Hobby(String name, boolean friends){
-        this.name = name;
-        this.friends = friends;
-    }
 
     public void setName() {
         try {
@@ -183,13 +176,20 @@ public class Hobby {
     public void getFriends() {
         System.out.println("Your friends have the same hobby, it is " + friends);
     }
-
-    public String toString() {
-        return "\nName of the hobby is " + name + ", "
-                + "You are engaged in this hobby " + hours + " hours a week \nand do it " + day +" day(s) a month. " +
-                "You can not do hobbies " + interval +  " days in a row, \nalso you can not do hobby " + lazyMonths +
-                " month a year" + "\n You spend " + moneySpend + " dollars for hobby" +
-                "\n You earn " + moneyEarn + " dollars from hobby. " + "\n You have friends that have the same hobby. It is "
-                + friends + "\nThe priority of " + name + " is " + priority + "\n";
+/*
+    public void setStyle() {}
+    public String getStyle() {
+        return null;
     }
+    public void setChanelName() {}
+    public String getChanelName() {
+        return null;
+    }
+    public void setAmountOfSubscribers() {}
+
+    public int getamountOfSubscribers() {
+        return 0;
+    }*/
+
+    abstract String tellAboutHobby();
 }

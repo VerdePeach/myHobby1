@@ -1,46 +1,30 @@
 package vlad;
 
+import java.util.Scanner;
+
 public class Test {
     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
 
-    Hobby karate = new Hobby();
+        HobbyKarate karate = new HobbyKarate();
+        System.out.println("Enter name of style of katare");
+        karate.setStyle(sc.nextLine());
 
-        System.out.println(karate.toString()+"\n");
+        HobbyYouTube youTube =  new HobbyYouTube();
+        System.out.println("And now, enter the name of your chanel on youtube");
+        youTube.setChanelName(sc.nextLine());
+        System.out.println("Enter how many subscribers do you have on youtube!");
+        youTube.setAmountOfSubscribers(sc.nextInt());
 
-    Hobby youtube = new Hobby("YouTube");
-        youtube.getName();
-        System.out.println("Enter other information fot it!");
-        System.out.println("***IF YOU DO NOT SEE WHERE TO INPUT INFORMATION PRESS ENTER***");
-        youtube.setFriends();
-        youtube.setDay();
-        youtube.setHours();
-        youtube.setInterval();
-        youtube.setLazyMonths();
-        youtube.setMoneyEarn();
-        youtube.setMoneySpend();
-        youtube.setPriority();
-        System.out.println(youtube.toString()+"\n");
+        Hobby myHobbies[] = {karate, youTube};
 
-    Hobby cat = new Hobby("Cat", true);
-        cat.getName();
-        System.out.println("Enter other information fot it!");
-        System.out.println("***IF YOU DO NOT SEE WHERE TO INPUT INFORMATION PRESS ENTER***");
-        cat.setDay();
-        cat.setHours();
-        cat.setInterval();
-        cat.setLazyMonths();
-        cat.setMoneyEarn();
-        cat.setMoneySpend();
-        cat.setPriority();
+        int k = 0;
+        for (Hobby i :myHobbies) {
+            System.out.println(myHobbies[k].tellAboutHobby()+"\n");
+            k++;
+        }
+        //System.out.println(myHobbies[0].tellAboutHobby()+"\n");
+       // System.out.println(myHobbies[1].tellAboutHobby()+"\n");
 
-        cat.getName();
-        cat.getDay();
-        cat.getHours();
-        cat.getInterval();
-        cat.getLazyMonths();
-        cat.getMoneyEarn();
-        cat.getMoneySpend();
-        cat.getPriority();
-        cat.getFriends();
     }
 }
